@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Live Queue &amp; Booking | Narmada Skin &amp; Hair Clinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#001b3d",
+              "surface": "#f7f9fb",
+              "error": "#ba1a1a",
+              "on-background": "#191c1e",
+              "on-tertiary-fixed-variant": "#3e4a41",
+              "secondary-fixed": "#d6e5ef",
+              "inverse-surface": "#2d3133",
+              "surface-container-highest": "#e0e3e5",
+              "tertiary-fixed-dim": "#bdcabe",
+              "on-tertiary-fixed": "#131e17",
+              "on-surface": "#191c1e",
+              "on-tertiary-container": "#dbe8dc",
+              "tertiary-container": "#5d6960",
+              "on-secondary-fixed": "#0f1d25",
+              "surface-dim": "#d8dadc",
+              "secondary": "#526069",
+              "on-error-container": "#93000a",
+              "outline": "#727783",
+              "primary-fixed-dim": "#a9c7ff",
+              "inverse-on-surface": "#eff1f3",
+              "surface-tint": "#005db7",
+              "outline-variant": "#c2c6d4",
+              "primary-fixed": "#d6e3ff",
+              "primary-container": "#1565c0",
+              "on-surface-variant": "#424752",
+              "surface-variant": "#e0e3e5",
+              "on-secondary-fixed-variant": "#3b4951",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#00468c",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#d3e2ed",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f7f9fb",
+              "tertiary-fixed": "#d9e6da",
+              "secondary-fixed-dim": "#bac9d3",
+              "surface-container-high": "#e6e8ea",
+              "primary": "#004d99",
+              "on-primary": "#ffffff",
+              "tertiary": "#455148",
+              "inverse-primary": "#a9c7ff",
+              "surface-container": "#eceef0",
+              "on-primary-container": "#dae5ff",
+              "surface-container-low": "#f2f4f6",
+              "on-secondary-container": "#56656e",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "background": "#f7f9fb"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(247, 249, 251, 0.7);
+        backdrop-filter: blur(20px);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f7f9fb;
+        color: #191c1e;
+      }
+      h1, h2, h3 {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-24">
+<!-- Top App Bar -->
+<nav class="sticky top-0 z-50 bg-[#f7f9fb] dark:bg-slate-900 border-b border-[#eceef0] dark:border-slate-800">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#004d99] dark:text-blue-400 text-3xl" data-icon="medical_services">medical_services</span>
+<span class="text-[#004d99] dark:text-blue-400 font-['Manrope'] font-extrabold tracking-tight text-2xl">Narmada Skin &amp; Hair Clinic</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#004d99] font-medium transition-colors" href="#">Home</a>
+<a class="text-[#004d99] dark:text-blue-300 font-bold" href="#">Live Queue</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#004d99] font-medium transition-colors" href="#">Appointments</a>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-all active:scale-95">Book Appointment</button>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-8 md:py-12">
+<!-- Hero Section / Context Header -->
+<header class="mb-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-7">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-sm font-semibold mb-4">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Live System Active
+                    </span>
+<h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-on-background mb-4 leading-tight">
+                        Your Care, <br/><span class="text-primary">Without the Wait.</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-lg leading-relaxed">
+                        Real-time queue tracking for Narmada Clinic. Monitor your position from anywhere and arrive exactly when you're needed.
+                    </p>
+</div>
+<div class="md:col-span-5 flex flex-col gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl flex items-center gap-6">
+<div class="h-16 w-16 bg-primary-container rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="timer">timer</span>
+</div>
+<div>
+<p class="text-sm font-medium text-on-surface-variant">Avg. Consultation Time</p>
+<p class="text-2xl font-bold text-primary">12-15 Mins</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Bento Grid: Queue Status & Booking -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Queue Visualizer (Large) -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_32px_rgba(0,0,0,0.04)] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
+<div>
+<h2 class="text-2xl font-bold mb-1">Queue Status</h2>
+<p class="text-on-surface-variant">Currently processing patients for Dr. Narmada Rao</p>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="event_seat">event_seat</span>
+<span class="font-medium">6 Patients Waiting</span>
+</div>
+</div>
+<!-- High Contrast Numbers -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-primary p-8 rounded-xl text-white flex flex-col items-center justify-center text-center transform hover:scale-[1.02] transition-transform">
+<span class="text-sm font-medium opacity-80 mb-2">NOW SERVING</span>
+<span class="text-6xl font-extrabold tracking-tighter">#12</span>
+</div>
+<div class="bg-secondary-container p-8 rounded-xl text-on-secondary-container flex flex-col items-center justify-center text-center">
+<span class="text-sm font-medium opacity-80 mb-2">YOUR TOKEN</span>
+<span class="text-6xl font-extrabold tracking-tighter">#18</span>
+</div>
+<div class="bg-tertiary-fixed p-8 rounded-xl text-on-tertiary-fixed flex flex-col items-center justify-center text-center">
+<span class="text-sm font-medium opacity-80 mb-2">EST. WAIT</span>
+<span class="text-5xl font-extrabold tracking-tighter">25<span class="text-2xl ml-1">min</span></span>
+</div>
+</div>
+<!-- Progress Visualization -->
+<div class="space-y-6">
+<div class="flex justify-between text-sm font-bold text-on-surface-variant px-1">
+<span>Current Progress</span>
+<span>Next: #13</span>
+</div>
+<div class="h-4 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[66%] relative">
+<div class="absolute right-0 top-0 h-full w-4 bg-white/20 animate-pulse"></div>
+</div>
+</div>
+<div class="flex justify-between items-center py-4 border-t border-outline-variant/10">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-secondary-fixed flex items-center justify-center text-xs font-bold">14</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-secondary-fixed flex items-center justify-center text-xs font-bold">15</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-secondary-fixed flex items-center justify-center text-xs font-bold">16</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container flex items-center justify-center text-xs font-bold text-on-surface-variant">+3</div>
+</div>
+<p class="text-sm font-medium text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="notifications_active">notifications_active</span>
+                            Notify me when #16 is called
+                        </p>
+</div>
+</div>
+</div>
+<!-- Booking Side Panel (Small) -->
+<div class="md:col-span-4 space-y-6">
+<div class="bg-white rounded-xl p-8 shadow-[0_4px_32px_rgba(0,0,0,0.02)] border border-outline-variant/10">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="add_circle">add_circle</span>
+                        Join the Queue
+                    </h3>
+<form class="space-y-5">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-1">Full Name</label>
+<input class="w-full px-4 py-3 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-1">Phone Number</label>
+<input class="w-full px-4 py-3 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="+91 98765 43210" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-1">Preferred Time Slot</label>
+<div class="grid grid-cols-2 gap-3">
+<button class="px-3 py-2 text-sm font-medium border-2 border-primary bg-primary-fixed text-primary rounded-lg" type="button">Now (Queue)</button>
+<button class="px-3 py-2 text-sm font-medium border-2 border-transparent bg-surface-container text-on-surface-variant rounded-lg hover:bg-surface-container-high transition-colors" type="button">Later Today</button>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-lg mt-4 shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-[0.98] transition-all" type="submit">
+                            Generate Token
+                        </button>
+</form>
+<p class="text-[11px] text-center text-on-surface-variant mt-4 leading-relaxed">
+                        By joining, you'll receive a real-time tracking link via SMS. Standard messaging rates apply.
+                    </p>
+</div>
+<!-- Info Card -->
+<div class="bg-secondary-container p-6 rounded-xl">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="info">info</span>
+<div>
+<p class="font-bold text-on-secondary-container mb-1 text-sm">Waiting Anxiety?</p>
+<p class="text-xs text-on-secondary-container opacity-80">Grab a coffee at the nearby café. We'll text you when there are only 2 patients ahead of you.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Dynamic Queue List / Details Section -->
+<section class="mt-12">
+<h2 class="text-2xl font-bold mb-8">Patient Queue Detail</h2>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container text-on-surface-variant uppercase text-[10px] font-bold tracking-widest">
+<tr>
+<th class="px-8 py-4">Position</th>
+<th class="px-8 py-4">Token</th>
+<th class="px-8 py-4">Status</th>
+<th class="px-8 py-4">Estimated Time</th>
+<th class="px-8 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Serving Row -->
+<tr class="bg-primary-fixed/30">
+<td class="px-8 py-5">
+<span class="text-primary font-bold">Now Serving</span>
+</td>
+<td class="px-8 py-5 font-bold">#12</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary text-white text-[10px] font-bold rounded-full">IN CONSULTATION</span>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">Ongoing</td>
+<td class="px-8 py-5 text-right">
+<button class="text-primary font-bold text-xs">View Doctor Profile</button>
+</td>
+</tr>
+<!-- Next Up Row -->
+<tr class="bg-white">
+<td class="px-8 py-5 font-medium">1st in Queue</td>
+<td class="px-8 py-5 font-bold">#13</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold rounded-full">PREPARING</span>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">~ 4 mins</td>
+<td class="px-8 py-5 text-right">
+<button class="text-on-surface-variant"><span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span></button>
+</td>
+</tr>
+<tr class="bg-white">
+<td class="px-8 py-5 font-medium">2nd in Queue</td>
+<td class="px-8 py-5 font-bold">#14</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] font-bold rounded-full">WAITING</span>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">~ 16 mins</td>
+<td class="px-8 py-5 text-right">
+<button class="text-on-surface-variant"><span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#f7f9fb]/70 dark:bg-slate-900/70 backdrop-blur-xl border-t border-white/20 shadow-[0_-4px_32px_rgba(0,0,0,0.04)] rounded-t-3xl md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] font-medium text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#1565c0] text-white rounded-2xl px-5 py-2" href="#">
+<span class="material-symbols-outlined" data-icon="reorder">reorder</span>
+<span class="font-['Inter'] font-medium text-[10px]">Live Queue</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-['Inter'] font-medium text-[10px]">Appointments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2" href="#">
+<span class="material-symbols-outlined" data-icon="content_cut">content_cut</span>
+<span class="font-['Inter'] font-medium text-[10px]">Services</span>
+</a>
+</nav>
+<!-- Post-Booking Confirmation State Overlay (Simulated) -->
+<!-- This would normally be toggled by JS, here shown as a floating snackbar for UI demonstration -->
+<div class="fixed bottom-28 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-[#191c1e] text-white rounded-2xl p-6 shadow-2xl flex items-center justify-between border border-white/10">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 bg-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<p class="text-xs opacity-70 font-medium">BOOKING CONFIRMED</p>
+<p class="font-bold">Token #18 • Position 6</p>
+</div>
+</div>
+<button class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-xs font-bold transition-colors">Details</button>
+</div>
+</body></html>
